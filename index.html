@@ -1,34 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AdaTasks</title>
     <link rel="stylesheet" href="./main.css">
-</head>
-
-<body class="body">
+  </head>
+  <body class="body">
     <header class="header">
-        <h1 class="header__title">AdaTasks</h1>
+      <h1 class="header__title">AdaTasks</h1>
     </header>
     <main class="main">
-        <div class="task-panel js_addTasks">
-            <form id="add-task-form">
-                <input class="input js_addInput" type="text" id="task-input" placeholder="Nueva tarea">
-                <button class="button js_addBtn" type="submit">Agregar</button>
-            </form>
-        </div>
-        <div class="task-list-container js_tasksList">
-            <form id="filter-form">
-                <input class="input js_inputList" type="text" id="filter-input" placeholder="Ejemplo: gim">
-                <button class="button js_filterBtn" type="submit">Buscar</button>
-            </form>
-            <label for=""></label>
-            <ul class="ul" id="task-list"></ul>
-        </div>
+      <div class="task-panel js_addTasks">
+        <form id="add-task-form">
+          <input class="input js_addInput" type="text" id="task-input" placeholder="Nueva tarea">
+          <button class="button js_addBtn" type="submit">Agregar</button>
+        </form>
+      </div>
+      <div class="task-list-container js_tasksList">
+        <form id="filter-form">
+          <input class="input js_inputList" type="text" id="filter-input" placeholder="Ejemplo: gim">
+          <button class="button js_filterBtn" type="submit">Buscar</button>
+        </form>
+        <!-- <label for=""></label> -->
+        <ul class="ul js_tasksUl" id="task-list"></ul>
+      </div>
     </main>
     <script src="main.js"></script>
-</body>
-
+  </body>
 </html>
