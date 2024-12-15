@@ -28,13 +28,13 @@ const tasks = [
 
 const renderOneTask = (objTask) => {
   if (objTask.completed)  {
-    const html = `<li class="task completed">
+    const html = `<li class="task completed"
     input checked type="checkbox" name="task" id="task"> ${objTask.name}</li>`;
     return html;
   }
 
   else {
-    const html = `<li class="task">
+    const html = `<li class="task"
     input type = "checkbox" name = "task" id = "task"> ${objTask.name}</li>`;
     return html;
   }
