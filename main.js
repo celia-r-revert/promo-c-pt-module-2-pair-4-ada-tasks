@@ -23,30 +23,30 @@ const tasks = [
 
 const renderOneTask = (objTask) => {
   if (objTask.completed) {
-    const html = `<li class="task completed" id=${objTask.id}>
-    <input checked type="checkbox" name="task" id="task"> ${objTask.name}</li>`;
+    const html = `<li class="js_task completed" id=${objTask.id}>
+    <input checked type="checkbox" name="task" id="task">${objTask.name}</li>`;
     return html;
   }
 
   else {
-    const html = `<li class="task" id=${objTask.id}>
+    const html = `<li class="js_task" id=${objTask.id}>
     <input type ="checkbox" name ="task" id ="task">${objTask.name}</li>`;
     return html;
   }
 }
 
-const renderAllTasks = () => {
+const renderAllTasks = (tasksToRender) => {
   let html = '';
-  for (const objTask of tasks) {
+  for (const objTask of tasksToRender) {
     html += renderOneTask(objTask);
   }
   tasksUl.innerHTML = html;
   
   const taskLis = document.querySelectorAll('.js_task');
 
-  for (const li of tasksLis) {
+  for (const li of taskLis) {
     li.addEventListener('click', handleClickTask);
-
+    console.log(taskLis);
   }
   
 }
@@ -68,11 +68,16 @@ const handleClickTask = (ev) => {
 
 }
 
-// Eventos del código 
 
+const handleInputSearch = (ev) => {
 
+  const filteredTasks = tasks.filter ((taskObj) => 
+  taskObj.name.includes(searchInput.value));
 
+  renderAllTasks(filteredTasks);
+};
 
+searchInput.addEventListener('input', handleInputSearch);
 
-
+renderAllTasks(tasks);
 

@@ -15,20 +15,20 @@
   <main class="main">
     <section>
       <form>
-        <input type="text" placeholder="Nueva tarea">
+        <input class="js_inputText" type="text" placeholder="Nueva tarea">
         <button class="button js_addBtn" type="submit">Agregar</button>
       </form>
     </section>
     <section>
-      <form>
-        <label class="form-label" for="search">Filtrar por texto: </label>
-        <input class="js_searchInput" type="search" name="search" id="search">
+      <form class="mt-1">
+        <label class="form__label" for="search">Filtrar por texto: </label>
+        <input class="js_searchInput form__input-text" type="search" name="search" id="search">
       </form>
-      <ul class="task-list js_tasksUl">
+      <ul class="task-list js_tasksUl mt-1">
       </ul>
     </section>
   </main>
-  <script src="main.js"></script>
+  <script src="./mainIv.js"></script>
 </body>
 
 </html>

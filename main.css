@@ -16,6 +16,15 @@
     padding: 20px;
     text-align: center;
     font-size: 24px;
+
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+
+:root {
+    font: 16px 'Roboto', Verdana, sans-serif;
 }
 
 .main {
@@ -27,6 +36,14 @@
 }
 
 
-.completed {
+.dark {
+    background-color: #393939;
+  }
+  .dark :not(h1, input, select, button, textarea) {
+    color: #fff;
+  }
+  
+  
+  .completed {
     text-decoration: line-through;
-}
+  }
